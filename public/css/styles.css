@@ -93,6 +93,11 @@ header > .container > nav > ul > li > a:hover {
   margin: 0px 15px 40px 15px;
 }
 
+.col-3 {
+  width: calc(100%/ 4-30px);
+  margin: 0px 15px 40px 15px;
+}
+
 .title a {
   color: #201d1d;
   font-size: 1.5em;
