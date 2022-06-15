@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -58,7 +57,7 @@ header > .container > nav > ul > li > a:hover {
   padding-right: 3px;
 }
 
-內容區塊 .img-fluid {
+.img-fluid {
   width: 100%;
 }
 
