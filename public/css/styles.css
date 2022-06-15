@@ -36,7 +36,7 @@ header > .container > h1 > a {
 
 header > .container > nav > ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 header > .container > nav > ul > li {
@@ -57,8 +57,18 @@ header > .container > nav > ul > li > a:hover {
   padding-right: 3px;
 }
 
+.img {
+  max-width: 100%;
+  background-position: center center;
+  box-sizing: border-box;
+}
+
 .img-fluid {
   width: 100%;
+}
+
+.img-rounded {
+  border-radius: 8px;
 }
 
 .row {
@@ -66,6 +76,47 @@ header > .container > nav > ul > li > a:hover {
   flex-wrap: wrap;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .col-4 {
-  width: 33.33333%;
+  width: calc(100%/ 3-30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.title a {
+  color: #201d1d;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.date {
+  color: #BD655C;
+}
+
+footer {
+  background-color: #C89CA3;
+  padding: 40 0 40 0;
+}
+
+dt {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+dd {
+  margin-bottom: 4px;
+}
+
+dd > a {
+  color: aliceblue;
 }
