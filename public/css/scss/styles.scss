@@ -8,39 +8,71 @@ $primary-color:#BD655C;
 body{
     margin: 0;
 }
-
-header{
-    // background-color: rgba(221, 206, 206, 0.826);
-
-}
-
-header>h1{
-    color: beige;
-    margin-left:30px ;
-    margin-top: 10px;
-}
 .container{
     max-width:1140px;
     width: 90%;
     margin:auto;
-    background-color:rgba(253, 253, 253, 0.918);
+    // background-color:rgba(253, 253, 253, 0.918);
+}
+
+ul,ol{
+    list-style-type: none;}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: rgba(242, 235, 235, 0.616);
+
+}
+
+header>.container>h1{
+    color:#C47F90;
+    // margin-left:30px ;
+    // margin-top: 10px;
+    padding-top:20px;
+}
+
+header>.container>h1>a{
+    color: $primary-color;
 }
 
 header>.container>nav>ul{
-    list-style-type: none;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
+
+
 
 header>.container>nav>ul>li{
   margin-right: 30px;
 }
 header>.container>nav>ul>li>a{
     display:block;
-    text-decoration:none;
     line-height: 60px;  
     color:$primary-color;
-    font-size: 1.2em;
-
+    font-size: 2em;
 }
 
+header>.container>nav>ul>li>a:hover{
+   background-color: rgba(255, 255, 255, 0.825);
+   border:1px solid brown;
+   padding-left:3px;
+   padding-right:3px;
+//    border-radius: 5px;
+}
+
+內容區塊
+.img-fluid{
+    width: 100%;
+}
+
+.row{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.col-4{
+    width: 33.33333%;
+}

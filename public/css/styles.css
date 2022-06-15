@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -7,23 +8,36 @@ body {
   margin: 0;
 }
 
-header > h1 {
-  color: beige;
-  margin-left: 30px;
-  margin-top: 10px;
-}
-
 .container {
   max-width: 1140px;
   width: 90%;
   margin: auto;
-  background-color: rgba(253, 253, 253, 0.918);
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: rgba(242, 235, 235, 0.616);
+}
+
+header > .container > h1 {
+  color: #C47F90;
+  padding-top: 20px;
+}
+
+header > .container > h1 > a {
+  color: #BD655C;
 }
 
 header > .container > nav > ul {
-  list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 header > .container > nav > ul > li {
@@ -32,8 +46,27 @@ header > .container > nav > ul > li {
 
 header > .container > nav > ul > li > a {
   display: block;
-  text-decoration: none;
   line-height: 60px;
   color: #BD655C;
-  font-size: 1.2em;
+  font-size: 2em;
+}
+
+header > .container > nav > ul > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.825);
+  border: 1px solid brown;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+內容區塊 .img-fluid {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-4 {
+  width: 33.33333%;
 }
