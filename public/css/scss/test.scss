@@ -1,4 +1,19 @@
+// 設定變數 $開頭
+$primary-color:#9D8977;
+
+
 body{
-    background-color: gray;
-    font
-}
+    // background-color: gray;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: antiquewhite;
+    font-size:24px;
+    }
+    
+.btn-primary{
+    background-color:$primary-color;
+    color: beige;
+    padding: 8px;
+    border-radius:4px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}    

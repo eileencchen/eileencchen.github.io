@@ -1,0 +1,14 @@
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: antiquewhite;
+  font-size: 24px;
+}
+
+.btn-primary {
+  background-color: #9D8977;
+  color: beige;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
