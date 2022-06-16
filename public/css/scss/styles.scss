@@ -125,7 +125,7 @@ h2{
 }
 
 .col-9{
-    width:calc( 100% / 1.33 - 30px);
+    width:calc( 100% / 1.333333333 - 30px);
     margin: 0px 15px 40px 15px ;
 }
 
@@ -181,3 +181,9 @@ width: 80%;
 background-color: aqua;
 }
 
+.btn-primary{
+    display:block;
+    background-color:$primary-color;
+    color: white;
+    padding: 10px;
+}
