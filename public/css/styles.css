@@ -56,13 +56,20 @@ header > .container > nav > ul > li > a:hover {
   padding-right: 5px;
 }
 
+.breadcrumb > li + li:before {
+  color: #CCCCCC;
+  content: ">";
+  padding: 0 5px;
+}
+
 #sidebar {
   position: absolute;
-  width: 200px;
+  width: 300px;
   padding: 0 20px 200px 20px;
 }
 
 #sidebar > .container > ul {
+  width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,13 +79,16 @@ header > .container > nav > ul > li > a:hover {
 #sidebar > ul > li {
   margin-left: 30px;
   margin-top: 30px;
+  background-color: #BD655C;
+  border-radius: 5px;
 }
 
 #sidebar > ul > li > a {
   display: block;
   line-height: 60px;
-  color: #BD655C;
+  color: white;
   font-size: 2em;
+  text-align: center;
 }
 
 h2 {
