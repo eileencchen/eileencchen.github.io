@@ -58,11 +58,45 @@ header>.container>nav>ul>li>a{
 
 header>.container>nav>ul>li>a:hover{
    background-color: rgba(255, 255, 255, 0.825);
-   border:1px solid brown;
-   padding-left:3px;
-   padding-right:3px;
+//    border:1px solid brown;
+   padding-left:5px;
+   padding-right:5px;
 //    border-radius: 5px;
 }
+
+#sidebar{
+    position:absolute;
+    width: 200px;
+    padding: 0 20px 200px 20px;
+
+}
+#sidebar>.container>ul{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: nowrap;
+}
+
+#sidebar>ul>li{
+    margin-left: 30px;  
+    margin-top:30px;
+   
+}
+
+#sidebar>ul>li>a{
+    display: block;
+    line-height: 60px;
+    color: $primary-color;
+    font-size: 2em;
+}
+
+h2{
+    font-size: 24px;
+    color: burlywood;
+    margin: 0 0 10px 0;
+    font-weight:bold;
+}
+
 
 // 圖片相關樣式
 .img{
@@ -107,7 +141,7 @@ header>.container>nav>ul>li>a:hover{
 }
 
 .col-3{
-    width:calc(100%/ 4-30px);
+    width:calc(100%/ 4-20px);
     margin:0px 15px 40px 15px;
 }
 
