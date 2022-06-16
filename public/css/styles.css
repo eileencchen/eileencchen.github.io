@@ -69,7 +69,7 @@ header > .container > nav > ul > li > a:hover {
 }
 
 #sidebar > .container > ul {
-  width: 100px;
+  width: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,12 +130,12 @@ h2 {
 }
 
 .col-4 {
-  width: calc(100%/ 3-30px);
+  width: calc( 100% / 3 - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-3 {
-  width: calc(100%/ 4-20px);
+  width: calc( 100% / 4 - 0px);
   margin: 0px 15px 40px 15px;
 }
 
@@ -165,4 +165,23 @@ dd {
 
 dd > a {
   color: aliceblue;
+}
+
+.breadcrumb {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.breadcrumb a {
+  color: #CCCCCC;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-80 {
+  width: 80%;
 }
