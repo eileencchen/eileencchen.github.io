@@ -201,11 +201,18 @@ background-color: aqua;
     display: block;
     position: relative;
     background-color: gold;
+    margin-bottom: 10px;
 
+}
+
+.img-overlay{
+    overflow:hidden;
+    border-radius: 8px;
 }
 
 .img-wrap img{
     vertical-align: top;
+    transition: all .5s;
     
 }
 
