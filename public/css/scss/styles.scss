@@ -196,3 +196,35 @@ background-color: aqua;
     opacity:0 0;
 
 }
+
+.img-wrap{
+    display: block;
+    position: relative;
+    background-color: gold;
+
+}
+
+.img-wrap img{
+    vertical-align: top;
+    
+}
+
+.img-wrap img:hover{
+    transform:scale(1.5);
+}
+
+.icon-new{
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+    color: white;
+    border-radius: 100%;
+    background-color: gold;
+    left:-25px;
+    top:-25px;
+    // /下方正中間/
+    // bottom:-25px;
+    // left: 50%;
+    // margin-left: -25px;
+    // background-color: #fff;
+}
