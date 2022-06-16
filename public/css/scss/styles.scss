@@ -53,15 +53,14 @@ header>.container>nav>ul>li>a{
     display:block;
     line-height: 60px;  
     color:$primary-color;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 header>.container>nav>ul>li>a:hover{
-   background-color: rgba(255, 255, 255, 0.825);
-   border-bottom:1px solid brown;
+   border-bottom:2px solid $primary-color;
 //    padding-left:5px;
 //    padding-right:5px;
-//    border-radius: 5px;
+
 }
 
 
@@ -178,10 +177,22 @@ background-color: aqua;
 
 .btn-primary{
     display:block;
-    background-color:$primary-color;
-    color: white;
+    background-color: white;
+    color:$primary-color;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 10px;
     border-radius: 2px  ;
+}
+
+.row>ul>li>a{
+    color:brown;
+    margin-left:15px;
+}
+
+.container>.row>.col-3>ul>li>a:hover{
+    background-color:$primary-color;
+    color: white;
+    opacity:0 0;
+
 }
