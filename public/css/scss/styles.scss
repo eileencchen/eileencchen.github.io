@@ -8,6 +8,7 @@ $primary-color:#BD655C;
 body{
     margin: 0;
 }
+
 .container{
     max-width:1140px;
     width: 90%;
@@ -22,6 +23,9 @@ ul,ol{
 a{
     text-decoration: none;
 }
+// ==============
+
+// headerstart
 
 header{
        background-color: rgba(242, 235, 235, 0.616);
@@ -41,7 +45,7 @@ header>.container>h1>a{
 
 header>.container>nav>ul{
     display:flex;
-    justify-content: flex-end;
+    // justify-content: space-between;
 }
 
 
@@ -62,7 +66,7 @@ header>.container>nav>ul>li>a:hover{
 //    padding-right:5px;
 
 }
-
+// 內容區塊start
 
 h2{
     font-size: 24px;
@@ -76,24 +80,20 @@ h2{
 .img{
     max-width: 100%;
     background-position: center center;
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
-// // 內容區塊
+// 圖片相關樣式
 // =====================
 
 .img-fluid{
     width: 100%;
 }
 
-
 .img-rounded{
     border-radius: 8px;
 }
-.row{
-    display:flex;
-    flex-wrap:wrap;
-}
+
 // 文字相關樣式
 .text-center{
     text-align: center;
@@ -107,10 +107,10 @@ h2{
     text-align: right;
 }
 
-// 三欄式
-.col-4{
-    width:calc( 100% / 3 - 30px);
-    margin:0px 15px 40px 15px;
+// 區塊相關樣式
+.row{
+    display:flex;
+    flex-wrap:wrap;
 }
 
 .col-3{
@@ -118,10 +118,38 @@ h2{
     margin:0px 15px 40px 15px;
 }
 
-.col-9{
-    width:calc( 100% / 1.333333333 - 30px);
-    margin: 0px 15px 40px 15px ;
+@for $i from 1 through 12{
+    .col-#{$i}{
+        $num:calc(12 / #{$i});
+        width: calc(100% / #{$i} - 30px);
+        margin:0px 15px 40px 15px;    
+    }
 }
+
+@media (min-width:768px){
+    @for $i from 1 through 12 {
+        .col-md-#{$i}{
+            --num: calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin: 0px 15px 40px 15px;
+        }
+    }
+}
+// 768px end
+
+@media(min-width:1200px){
+    @for $i from 1 through 12{
+        .col-lg-#{$i}{
+            --num:calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin:0px 15px 40px 15px;    
+        }
+    }
+}
+// 1200px end
+
+
+
 
 .title a{
     color:rgb(32, 29, 29);
@@ -235,4 +263,65 @@ background-color: aqua;
     // left: 50%;
     // margin-left: -25px;
     // background-color: #fff;
+}
+
+// 小於767px以下執行 start 
+@media (max-width:767px){
+    h1{
+        // width: 85%;
+        float: left;
+    }
+    .icon-menu{
+        float: right;
+        width: 15%;
+        display: block;
+        background-color: $primary-color;
+        color:black;
+        line-height: 60px;
+        text-align: center;
+    }
+    
+    header > .container > nav{
+        width: 100%;
+        float: left;
+        display: none;
+    }
+    header > .container > nav.active{
+        display: block;
+    }
+    header > .container > nav > ul{
+        display: block;
+    }
+    header > .container > nav > ul > li{
+        text-align: center;
+        width: 100%;
+    }
+    header > .container > nav > ul > li > a{
+        display: block;
+    }
+    .overflow-hidden{
+        overflow: hidden;
+    }
+} // max-width 767 end
+
+// 超過768px以上執行 start 
+@media (min-width:768px){
+    .icon-menu{
+        display: none;
+    }
+}// min-width 768 end 
+
+// $i index
+// for迴圈
+// from through 從1到3
+@for $i from 1 through 10{
+    .fz-#{$i}{
+        font-size:$i*1em;
+    }
+}
+
+@for $i from 1 through 5{
+    .mb-#{$i}{
+        margin-bottom: $i * 1em;
+    }
 }
