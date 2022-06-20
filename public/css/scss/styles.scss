@@ -113,15 +113,10 @@ h2{
     flex-wrap:wrap;
 }
 
-.col-3{
-    width:calc( 100% / 4 - 30px);
-    margin:0px 15px 40px 15px;
-}
-
 @for $i from 1 through 12{
     .col-#{$i}{
         $num:calc(12 / #{$i});
-        width: calc(100% / #{$i} - 30px);
+        width: calc(100% / var(--num) - 30px);
         margin:0px 15px 40px 15px;    
     }
 }
