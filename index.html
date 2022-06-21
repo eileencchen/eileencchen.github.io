@@ -8,24 +8,37 @@
     <link rel="stylesheet" href="public/css/styles.css">
   </head>
   <body></body>
-  <header class="overflow-hidden">
-    <div class="container"> </div><a class="icon-menu" href="#">menu </a>
-    <h1><a href="index.html">Eileen Chen.</a></h1>
-    <nav>
-      <ul>
-        <li><a href="Design list.html">work</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">resume</a></li>
-        <li><a href="#">fun</a></li>
-        <li><a href="#">contact</a></li>
-      </ul>
-    </nav>
+  <header>
+    <div class="container">
+      <div class="row flex-space-between">
+        <h1><a href="index.html">Eileen Chen.</a></h1><a class="icon-menu" href="#">menu </a>
+        <nav>
+          <ul>
+            <li><a href="#">work</a>
+              <ul class="submenu"> 
+                <li> <a href="designlist.html">Web Design</a></li>
+                <li> <a href="designlist.html">App Design</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">about</a></li>
+            <li><a href="#">resume</a></li>
+            <li><a href="#">fun</a>
+              <ul class="submenu"> 
+                <li> <a href="fun.html">Photography</a></li>
+                <li> <a href="fun.html">Notes</a></li>
+              </ul>
+            </li>
+            <li><a href="contactus.html">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header><img class="img" src="public/images/ec.png" alt="intro">
   <!-- content start-->
   <!-- .container>h1{New Updates}+.row>.col-md-4*6>img.img-fluid+p.title>a[href="#"]{標題$}^p.description{內容}-->
   <!-- .container>h1{New Updates}+.row>.col-md-4*6>img.img-fluid+p.title.text-center>a[href="#"]{標題$}^p.date.text-center{內容}-->
   <div class="container">
-    <h2 class="text-center">New Updates</h2>
+    <h2 class="fz-3 mb-3 text-center">New Updates</h2>
     <div class="row">
       <div class="col-6 col-md-4 col-lg-3"><a href="#"><img class="img-fluid img-rounded" src="https://placekitten.com/300/200" alt=""></a>
         <p class="title text-center"><a href="#">作品標題1</a></p>

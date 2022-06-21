@@ -28,36 +28,35 @@ a{
 // headerstart
 
 header{
-       background-color: rgba(242, 235, 235, 0.616);
-    
+    background-color: rgba(242, 235, 235, 0.616);
 }
 
-header>.container>h1{
+header>.container h1{
     color:#C47F90;
     // margin-left:30px ;
     // margin-top: 10px;
-    padding-top:20px;
+    // padding-top:20px;
 }
 
-header>.container>h1>a{
+header>.container h1>a{
     color: $primary-color;
 }
 
-header>.container>nav>ul{
+header>.container nav>ul{
     display:flex;
     // justify-content: space-between;
 }
 
 
-
-header>.container>nav>ul>li{
+header>.container nav>ul>li{
   margin-right: 30px;
 }
-header>.container>nav>ul>li>a{
+header>.container nav>ul>li>a{
     display:block;
     line-height: 60px;  
     color:$primary-color;
     font-size: 1.5em;
+    letter-spacing: 2px;
 }
 
 header>.container>nav>ul>li>a:hover{
@@ -66,6 +65,24 @@ header>.container>nav>ul>li>a:hover{
 //    padding-right:5px;
 
 }
+
+@media (min-width:768px){
+    header>.container nav{
+        width: 100%;
+    }
+    header>.container>nav>ul>li{
+        position: relative;
+    }
+    .submenu{
+        position: absolute;
+        background-color: gold;
+        width: 30%;
+        // left: 0px;
+        // top:60px;
+        
+    }
+}//min-width 768 end
+
 // 內容區塊start
 
 h2{
@@ -93,6 +110,9 @@ h2{
 .img-rounded{
     border-radius: 8px;
 }
+.img-circle{
+    border-radius:100%
+}
 
 // 文字相關樣式
 .text-center{
@@ -107,6 +127,10 @@ h2{
     text-align: right;
 }
 
+.text-justify{
+    text-align: justify;
+}
+
 // 區塊相關樣式
 .row{
     display:flex;
@@ -115,7 +139,7 @@ h2{
 
 @for $i from 1 through 12{
     .col-#{$i}{
-        $num:calc(12 / #{$i});
+        --num:calc(12 / #{$i});
         width: calc(100% / var(--num) - 30px);
         margin:0px 15px 40px 15px;    
     }
@@ -143,7 +167,11 @@ h2{
 }
 // 1200px end
 
-
+@media (min-width:768px){
+    .order-md-1{
+        order:-1;
+    }
+}
 
 
 .title a{
@@ -208,18 +236,21 @@ background-color: aqua;
     margin-bottom: 10px;
     border-radius: 2px  ;
 }
-
-.row>ul>li>a{
-    color:brown;
-    margin-left:15px;
+.text-primary{
+    color:$primary-color;
 }
 
-.container>.row>.col-3>ul>li>a:hover{
-    background-color:$primary-color;
-    color: white;
-    opacity:0 0;
+// .row>ul>li>a{
+//     color:brown;
+//     margin-left:15px;
+// }
 
-}
+// .container>.row>.col-3>ul>li>a:hover{
+//     background-color:$primary-color;
+//     color: white;
+//     opacity:0 0;
+
+// }
 
 .img-wrap{
     display: block;
@@ -260,14 +291,17 @@ background-color: aqua;
     // background-color: #fff;
 }
 
+.flex-space-between{
+    justify-content: space-between;
+}
+
 // 小於767px以下執行 start 
 @media (max-width:767px){
     h1{
         // width: 85%;
-        float: left;
     }
+
     .icon-menu{
-        float: right;
         width: 15%;
         display: block;
         background-color: $primary-color;
@@ -275,28 +309,77 @@ background-color: aqua;
         line-height: 60px;
         text-align: center;
     }
+    header{
+        position: relative;
+    }
     
-    header > .container > nav{
+    header > .container nav{
         width: 100%;
-        float: left;
-        display: none;
+        position: absolute;
+        top: 60px;
+        background-color: black;
+        // display: none;
+        // 需要蓋板的話打開以下程式碼
+        // position:fixed;
+        // top:0px;
+        // height: 100vh;
+        // z-index: 999;
+
+        // 需要從上往下出現導覽時打開以下程式碼
+        // height: 0px;
+        // overflow: hidden;
+        
     }
-    header > .container > nav.active{
+    nav{
+        // viewport width
+        left:0px;
+    //    這一行等二層選單做完之後再打開
+        left:-100vw;
+        // opacity:0
+        transition:all .3s;
+    }
+
+    .icon-menu:hover + nav{
+        left:0px;
+        // opacity:1;
+
+    }
+    header > .container nav.active{
         display: block;
     }
-    header > .container > nav > ul{
+    header > .container nav > ul{
         display: block;
     }
-    header > .container > nav > ul > li{
+    header > .container nav > ul > li{
         text-align: center;
         width: 100%;
+        border-bottom: 1px solid $primary-color;
     }
+
     header > .container > nav > ul > li > a{
         display: block;
     }
-    .overflow-hidden{
-        overflow: hidden;
+
+    .submenu{
+        display:none;
+        background-color: $primary-color;
     }
+
+    header > .container > nav > ul > li:hover.submenu {
+        display: block;
+    }
+
+    .submenu>li{
+        line-height: 60px;
+        border-bottom: 1px solid black;
+
+    }
+
+    .submenu>li>a{
+        color: black;
+        display:block;
+    }
+    
 } // max-width 767 end
 
 // 超過768px以上執行 start 

@@ -8,30 +8,41 @@ html
         title Eileen's portfolio
         link(rel='stylesheet', href='public/css/styles.css')
     body
-    header.overflow-hidden
-        .container 
-        a.icon-menu(href="#") menu 
-        h1
-          a(href='index.html') Eileen Chen.
-        nav
-          ul
-            li
-               a(href='Design list.html') work
-            li
-               a(href='#') about
-            li
-               a(href='#') resume
-            li
-               a(href='#') fun
-            li
-               a(href='#') contact
+    header
+        .container
+          .row.flex-space-between
+            h1
+              a(href='index.html') Eileen Chen.
+            a.icon-menu(href="#") menu 
+            nav
+              ul
+                li
+                  a(href="#") work
+                  ul.submenu 
+                    li 
+                      a(href="designlist.html") Web Design
+                    li 
+                      a(href="designlist.html") App Design
+                li
+                  a(href='aboutus.html') about
+                li
+                  a(href="#") resume
+                li
+                  a(href="#") fun
+                  ul.submenu 
+                    li 
+                      a(href="fun.html") Photography
+                    li 
+                      a(href="fun.html") Notes
+                li
+                  a(href="contactus.html") contact
     
     img.img(src='public/images/ec.png' alt='intro')
     // content start
     // .container>h1{New Updates}+.row>.col-md-4*6>img.img-fluid+p.title>a[href="#"]{標題$}^p.description{內容}
     // .container>h1{New Updates}+.row>.col-md-4*6>img.img-fluid+p.title.text-center>a[href="#"]{標題$}^p.date.text-center{內容}
     .container
-      h2.text-center New Updates
+      h2.fz-3.mb-3.text-center New Updates
       .row
         .col-6.col-md-4.col-lg-3
           a(href='#')

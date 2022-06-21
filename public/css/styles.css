@@ -25,34 +25,49 @@ header {
   background-color: rgba(242, 235, 235, 0.616);
 }
 
-header > .container > h1 {
+header > .container h1 {
   color: #C47F90;
-  padding-top: 20px;
 }
 
-header > .container > h1 > a {
+header > .container h1 > a {
   color: #BD655C;
 }
 
-header > .container > nav > ul {
+header > .container nav > ul {
   display: flex;
 }
 
-header > .container > nav > ul > li {
+header > .container nav > ul > li {
   margin-right: 30px;
 }
 
-header > .container > nav > ul > li > a {
+header > .container nav > ul > li > a {
   display: block;
   line-height: 60px;
   color: #BD655C;
   font-size: 1.5em;
+  letter-spacing: 2px;
 }
 
 header > .container > nav > ul > li > a:hover {
   border-bottom: 2px solid #BD655C;
 }
 
+@media (min-width: 768px) {
+  header > .container nav {
+    width: 100%;
+  }
+
+  header > .container > nav > ul > li {
+    position: relative;
+  }
+
+  .submenu {
+    position: absolute;
+    background-color: gold;
+    width: 30%;
+  }
+}
 h2 {
   font-size: 24px;
   color: burlywood;
@@ -73,6 +88,10 @@ h2 {
   border-radius: 8px;
 }
 
+.img-circle {
+  border-radius: 100%;
+}
+
 .text-center {
   text-align: center;
 }
@@ -85,67 +104,83 @@ h2 {
   text-align: right;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
 }
 
 .col-1 {
+  --num:calc(12 / 1);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-2 {
+  --num:calc(12 / 2);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-3 {
+  --num:calc(12 / 3);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-4 {
+  --num:calc(12 / 4);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-5 {
+  --num:calc(12 / 5);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-6 {
+  --num:calc(12 / 6);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-7 {
+  --num:calc(12 / 7);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-8 {
+  --num:calc(12 / 8);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-9 {
+  --num:calc(12 / 9);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-10 {
+  --num:calc(12 / 10);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-11 {
+  --num:calc(12 / 11);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
 
 .col-12 {
+  --num:calc(12 / 12);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
 }
@@ -296,6 +331,11 @@ h2 {
     margin: 0px 15px 40px 15px;
   }
 }
+@media (min-width: 768px) {
+  .order-md-1 {
+    order: -1;
+  }
+}
 .title a {
   color: #201d1d;
   font-size: 1.5em;
@@ -355,15 +395,8 @@ dd > a {
   border-radius: 2px;
 }
 
-.row > ul > li > a {
-  color: brown;
-  margin-left: 15px;
-}
-
-.container > .row > .col-3 > ul > li > a:hover {
-  background-color: #BD655C;
-  color: white;
-  opacity: 0 0;
+.text-primary {
+  color: #BD655C;
 }
 
 .img-wrap {
@@ -397,13 +430,12 @@ dd > a {
   top: -25px;
 }
 
-@media (max-width: 767px) {
-  h1 {
-    float: left;
-  }
+.flex-space-between {
+  justify-content: space-between;
+}
 
+@media (max-width: 767px) {
   .icon-menu {
-    float: right;
     width: 15%;
     display: block;
     background-color: #BD655C;
@@ -412,31 +444,62 @@ dd > a {
     text-align: center;
   }
 
-  header > .container > nav {
+  header {
+    position: relative;
+  }
+
+  header > .container nav {
     width: 100%;
-    float: left;
-    display: none;
+    position: absolute;
+    top: 60px;
+    background-color: black;
   }
 
-  header > .container > nav.active {
+  nav {
+    left: 0px;
+    left: -100vw;
+    transition: all 0.3s;
+  }
+
+  .icon-menu:hover + nav {
+    left: 0px;
+  }
+
+  header > .container nav.active {
     display: block;
   }
 
-  header > .container > nav > ul {
+  header > .container nav > ul {
     display: block;
   }
 
-  header > .container > nav > ul > li {
+  header > .container nav > ul > li {
     text-align: center;
     width: 100%;
+    border-bottom: 1px solid #BD655C;
   }
 
   header > .container > nav > ul > li > a {
     display: block;
   }
 
-  .overflow-hidden {
-    overflow: hidden;
+  .submenu {
+    display: none;
+    background-color: #BD655C;
+  }
+
+  header > .container > nav > ul > li:hover.submenu {
+    display: block;
+  }
+
+  .submenu > li {
+    line-height: 60px;
+    border-bottom: 1px solid black;
+  }
+
+  .submenu > li > a {
+    color: black;
+    display: block;
   }
 }
 @media (min-width: 768px) {
